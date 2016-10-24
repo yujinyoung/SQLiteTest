@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         butinput.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 db=dbhelper.getWritableDatabase();
-                db.execSQL("insert into idoltable values("+editName.getText().toString()+", "
+                db.execSQL("insert into idoltable values('"+editName.getText().toString()+"', "
                         +editCount.getText().toString()+
                         ")");
                 db.close();
